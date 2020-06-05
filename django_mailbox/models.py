@@ -28,7 +28,10 @@ from django.core.mail.message import make_msgid
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django.utils.timezone import now
-from django.utils.encoding import python_2_unicode_compatible
+# old
+#from django.utils.encoding import python_2_unicode_compatible
+# new:
+from six import python_2_unicode_compatible
 
 from django_mailbox import utils
 from django_mailbox.signals import message_received
